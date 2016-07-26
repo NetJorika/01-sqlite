@@ -1,3 +1,8 @@
+.header on
+.nullvalue <NULL>
+.mode columns
+
+
 CREATE TABLE artists (
     name TEXT UNIQUE NOT NULL,
     tracks INTEGER,
@@ -15,12 +20,12 @@ CREATE TABLE images (
 
 
 INSERT INTO artists (name, tracks, description, image)
-VALUES ('Цой', 10, 'Легенда русского рока', 1);
+VALUES ('Р¦РѕР№', 10, 'Р›РµРіРµРЅРґР° СЂСѓСЃСЃРєРѕРіРѕ СЂРѕРєР°', 1);
 
 INSERT INTO artists (name) VALUES ('<Unknown>');
 INSERT INTO artists (name, tracks) VALUES ('<Unknown>', NULL);
 
-INSERT INTO artists (name, tracks, image) VALUES ('Кино', 20, 1);
+INSERT INTO artists (name, tracks, image) VALUES ('РљРёРЅРѕ', 20, 1);
 
 INSERT INTO images VALUES (1, 'covers/kino.jpg');
 
@@ -72,11 +77,11 @@ FROM artists;
 
 
 
-SELECT * FROM artists WHERE name LIKE 'ц_%';
+SELECT * FROM artists WHERE name LIKE 'С†_%';
 
-SELECT * FROM artists WHERE name LIKE 'Ц_%';
+SELECT * FROM artists WHERE name LIKE 'Р¦_%';
 
-SELECT * FROM artists WHERE name GLOB 'Ц?*';
+SELECT * FROM artists WHERE name GLOB 'Р¦?*';
 
 
 
