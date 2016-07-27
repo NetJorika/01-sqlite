@@ -2,6 +2,7 @@
 .nullvalue <NULL>
 .mode columns
 
+.open ""
 
 CREATE TABLE artists (
     name TEXT UNIQUE NOT NULL,
